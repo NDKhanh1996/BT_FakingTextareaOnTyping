@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onkeydown="fakeType()">
+<p id="text"></p>
+<script>
+  let str = "https://github.com/NDKhanh1996/BT_FakingTextareaOnTyping.git"
+  let result = ""
+  let count = 0
+
+  function fakeType() {
+      result += str[count]
+      count ++
+      if (count === str.length + 1){
+          result = ""
+          count = 0
+      }
+      document.getElementById("text").innerHTML = result;
+  }
+
+</script>
+</body>
+</html>
